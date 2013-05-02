@@ -1,0 +1,49 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "glyphs": [
+    {
+      "search": [
+        "facebook",
+        "social",
+        "logo"
+      ],
+      "code": 61522,
+      "uid": "53d4dc777eeba379412efba3ee1cac9e",
+      "css": "facebook",
+      "orig_css": "facebook",
+      "orig_code": 61522,
+      "src": "mfglabs",
+      "from": 61522
+    },
+    {
+      "search": [
+        "github",
+        "social",
+        "logo"
+      ],
+      "code": 61525,
+      "uid": "9ea28ba01d59a4410fa3db9c02cce157",
+      "css": "github",
+      "orig_css": "github",
+      "orig_code": 61525,
+      "src": "mfglabs",
+      "from": 61525
+    },
+    {
+      "search": [
+        "twitter",
+        "social",
+        "logo"
+      ],
+      "code": 61528,
+      "uid": "ec3648a34c41b70671dc38dbb72deb04",
+      "css": "twitter",
+      "orig_css": "twitter",
+      "orig_code": 61528,
+      "src": "mfglabs",
+      "from": 61528
+    }
+  ]
+}
