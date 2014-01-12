@@ -640,263 +640,9 @@ li {
 }	
 
 
-@media (min-width: 768px) and (max-width: 959px) {
-	/* Typography */
-	.title {
-		font-size: 1.4rem;
-	}
-    
-    .main-content .title {
-        padding-top: 70px !important;
-        text-align: center;
-    }
-	
-	p {
-		font-size: 0.9rem;
-	}
-	
-	p a {
-		font-size: 0.8rem;
-	}
-	
-	a {
-		font-size: 0.9rem;
-		line-height: 120%;
-	}
-	
-	h3 {
-		font-size: 1.1rem;
-	}
-	
-	h5 {
-		font-size: 0.9rem;
-	}
-	
-	/* Layout */
-    .add-bar {
-        height: 220px;
-        width: 100%;
-	}
-    
-    .additions-container {
-        width: 100%;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-    }
-    
-    .top-pad {
-		padding-top: 25px;
-	}
-	
-	.top-pad-half {
-		padding-top: 12px;
-	}
-	
-	.top-pad-quarter {
-		padding-top: 6px !important;
-	}
-	
-	.lr-pad {
-		padding-left: 0.8vw;
-		padding-right: 0.8vw;
-	}
-	
-	.l-pad {
-		padding-left: 0.8vw;
-	}
-	
-	.r-pad {
-		padding-right: 0.8vw;
-	}
-	
-	.social-icons-pad {
-		padding-top: 20px;
-        text-align: center;
-    }
-    
-    .icon-facebook {
-        padding-right: 15px !important;
-    }
-    
-    .icon-github {
-        padding-left: 15px !important;
-    }
-    
-    /* Nav-Bar */
-    .button-wrap {
-        padding-top: 10px;
-        padding-bottom: 25px;
-        text-align: center;
-    }
-    
-    .submit-button {
-		background: #8AD19D;
-        padding: 5px 10px;
-        display: inline;
-	}
-	
-	.submit-button:hover, .info-button:hover {
-		opacity: 0.9;
-	}
-    
-    .info-button {
-		background: #80ADBD;
-        padding: 5px 10px;
-        display: inline;
-	}
-    
-    nav div a{  
-        display: block;  
-        float: none;  
-        width: 100%;  
-    }
-    
-    #logo {
-        text-align: center;
-        margin-top: 31px;
-        font-size: 1.5rem;
-    }
-    
-    /* Main Content */
-	li {
-		padding-left: 0;
-		padding-bottom: 0.6vh;
-	}
-    
-    .small-6.large-3.columns.top-pad-half {
-        margin-bottom: 50px;
-    }
-    
-    .main-content .title {
-        padding: 25px 0;
-    }
-    
-    .main-content .small-6 {
-        padding-left: 9vw !important;
-    }
-    
 
-    
-    /* Add Bar */
-    .additions-container li {
-        display: inline-block !important;
-        width: 25vw;
-        height: 12vh;
-        padding-top: 1vh;
-        
-        margin-left: 5.5vw !important;
-        white-space: normal;
-    }
 
-    .additions-container li h5 {
-        padding-left: 0 !important;
-        padding-top: 0.5vh;
-    }
-    
-    .add-bar .title {
-        margin-left: 0.5vw !important;
-        padding-top: 2vh;
-        padding-bottom: 0.5vh;
-        text-align: center;
-    }
-    
-    .add-bar li>a {
-        font-size: 1rem;
-    }
-    
-    /* Modals */
-    #submit-form {
-        width: 68vw;
-        height: auto;
-        margin: -150px 16vw;
-        padding: 12px 30px 25px;
-        text-align: left;
-        background: #4a5b79;
-        color: #F2EFE9;
-    }
-
-    input[type="text"] {
-        width: 30vw;
-    }
-    
-
-    #submit-form input[type=submit] {
-        background: #61C291;
-        border: 0;
-        outline: 0;
-        color: #F2EFE9;
-        padding: 5px 8px;
-        margin: 20px 0 0;
-    }
-    
-    #submit-form fieldset {
-        margin-top: 10px;
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    
-    p {
-        color: #F2EFE9;
-        font-size: 0.9em;
-        margin: 19px 0;
-    }
-    
-    #info-modal li {
-        padding: 0 0 14px 14px;
-        color: #F2EFE9;
-        font-size: 0.9em;
-    }
-    
-     #info-modal {
-        width: 80vw;
-        height: auto;
-        margin: -38vh 9.9vw;
-        padding: 12px 30px 25px;
-        text-align: left;
-        background: #4a5b79;
-    }
-
-    #cryptocoin-modal {
-        width: 60vw;
-        height: auto;
-        margin: -22vh 20vw;
-        padding: 12px 30px 12px;
-        text-align: left;
-        background: #4a5b79;
-    }
-    
-    .flattr-button, .cryptocoin-button {
-        padding: 10px 12px;
-        display: block;
-    }
-    
-    .flattr-button{
-        background: #e6a423;
-        margin-top: 10px;
-    }
-
-    .paypal-form-wrap {
-        margin-top: 10px;
-    }
-
-    .paypal-button{
-        background: #3b7bbf;
-        color: #F2EFE9;
-        border: none;
-        padding: 11px 12px;
-        font-size: 0.9rem;
-        width: 100%;
-        text-align: left;
-    }
-
-    .cryptocoin-button {
-        background: #61C291;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 787px) {
+@media (min-width: 360px) and (max-width: 959px) {
     	/* Typography */
 	.title {
 		font-size: 1.6rem;
@@ -904,7 +650,7 @@ li {
     
     .main-content .title {
         padding-top: 70px !important;
-        padding-bottom: 1vh;
+        padding-bottom: 15px;
         text-align: center;
     }
 	
@@ -955,20 +701,20 @@ li {
 	}
 	
 	.lr-pad {
-		padding-left: 0.8vw;
-		padding-right: 0.8vw;
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 	
 	.l-pad {
-		padding-left: 0.8vw;
+		padding-left: 12px;
 	}
 	
 	.r-pad {
-		padding-right: 0.8vw;
+		padding-right: 12px;
 	}
 	
 	.social-icons-pad {
-		padding-top: 2vh;
+		padding-top: 18px;
         text-align: center;
     }
     
@@ -1018,19 +764,19 @@ li {
     /* Main Content */
 	li {
 		padding-left: 0;
-		padding-bottom: 0.6vh;
+		padding-bottom: 8px;
 	}
     
     .small-6.large-3.columns.top-pad-half {
-        margin-bottom: 0.8vh;
+        margin-bottom: 12px;
     }
     
     .main-content .title {
-        padding: 3vh 0;
+        padding: 20px 0;
     }
     
     .main-content .small-6 {
-        padding-left: 8vw !important;
+        padding-left: 4% !important;
     }
     
 
@@ -1038,23 +784,23 @@ li {
     /* Add Bar */
     .additions-container li {
         display: inline-block !important;
-        width: 40vw;
-        height: 15vh;
-        padding-top: 2.5vh;
-        
-        margin-left: 5.5vw !important;
+        width: auto;
+        height: 120px;
+        padding-top: 36px;
+        margin-left: 20px !important;
+        margin-right: 45px;
         white-space: normal;
     }
 
     .additions-container li h5 {
         padding-left: 0 !important;
-        padding-top: 0.5vh;
+        padding-top: 4px;
     }
     
     .add-bar .title {
-        margin-left: 0.5vw !important;
-        padding-top: 2vh;
-        padding-bottom: 0.5vh;
+        margin-left: 5px !important;
+        padding-top: 5px;
+        padding-bottom: 5px;
         text-align: center;
     }
     
@@ -1064,9 +810,9 @@ li {
     
     /* Modals */
     #submit-form {
-        width: 68vw;
+        width: 70%;
         height: auto;
-        margin: -150px 16vw;
+        margin: -150px 15%;
         padding: 12px 30px 25px;
         text-align: left;
         background: #4a5b79;
@@ -1074,7 +820,7 @@ li {
     }
 
     input[type="text"] {
-        width: 35vw;
+        width: 150%;
     }
     
 
@@ -1106,18 +852,18 @@ li {
     }
     
      #info-modal {
-        width: 80vw;
+        width: 90%;
         height: auto;
-        margin: -40vh 9.9vw;
+        margin: -240px 5%;
         padding: 12px 30px 25px;
         text-align: left;
         background: #4a5b79;
     }
 
     #cryptocoin-modal {
-        width: 70vw;
+        width: 70%;
         height: auto;
-        margin: -22vh 15vw;
+        margin: -150px 15%;
         padding: 12px 30px 12px;
         text-align: left;
         background: #4a5b79;
@@ -1160,7 +906,7 @@ li {
     
     .main-content .title {
         padding-top: 70px !important;
-        padding-bottom: 1vh;
+        padding-bottom: 10px;
         text-align: center;
     }
 	
@@ -1211,16 +957,16 @@ li {
 	}
 	
 	.lr-pad {
-		padding-left: 0.8vw;
-		padding-right: 0.8vw;
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 	
 	.l-pad {
-		padding-left: 0.8vw;
+		padding-left: 8px;
 	}
 	
 	.r-pad {
-		padding-right: 0.8vw;
+		padding-right: 8px;
 	}
 	
 	.social-icons-pad {
@@ -1238,8 +984,7 @@ li {
     
     /* Nav-Bar */
     .button-wrap {
-        padding-top: 2.8vh;
-        padding-bottom: 5vh;
+        padding-bottom: 40px;
         text-align: center;
     }
     
@@ -1274,15 +1019,15 @@ li {
     /* Main Content */
 	li {
 		padding-left: 0;
-		padding-bottom: 0.6vh;
+		padding-bottom: 5px;
 	}
     
     .small-6.large-3.columns.top-pad-half {
-        margin-bottom: 0.8vh;
+        margin-bottom: 8px;
     }
     
     .main-content .title {
-        padding: 3vh 0;
+        padding: 30px 0;
     }
     
     .main-content .small-6 {
@@ -1294,23 +1039,21 @@ li {
     /* Add Bar */
     .additions-container li {
         display: inline-block !important;
-        width: 40vw;
-        height: 15vh;
-        padding-top: 2.5vh;
-        
-        margin-left: 5.5vw !important;
+        width: auto;
+        height: 140px;
+        padding-top: 50px;
+        margin-left: 10px;
+        margin-right: 45px;
         white-space: normal;
     }
 
     .additions-container li h5 {
         padding-left: 0 !important;
-        padding-top: 0.5vh;
     }
     
     .add-bar .title {
-        margin-left: 0.5vw !important;
-        padding-top: 2vh;
-        padding-bottom: 0.5vh;
+        padding-top: 10px;
+        padding-bottom: 6px;
         text-align: center;
     }
     
@@ -1320,9 +1063,9 @@ li {
     
     /* Modals */
     #submit-form {
-        width: 80vw;
+        width: 90%;
         height: auto;
-        margin: -150px 9.9vw;
+        margin: -150px 5%;
         padding: 12px 20px 25px;
         text-align: left;
         background: #4a5b79;
@@ -1330,7 +1073,7 @@ li {
     }
 
     input[type="text"] {
-        width: 40vw;
+        width: 100%;
     }
     
 
@@ -1362,18 +1105,18 @@ li {
     }
     
      #info-modal {
-        width: 80vw;
+        width: 90%;
         height: auto;
-        margin: -40vh 9.9vw;
+        margin: -200px 5%;
         padding: 12px 30px 25px;
         text-align: left;
         background: #4a5b79;
     }
 
     #cryptocoin-modal {
-        width: 80vw;
+        width: 90%;
         height: auto;
-        margin: -22vh 9.9vw;
+        margin: -150px 5%;
         word-wrap: break-word;
         padding: 12px 30px 12px;
         text-align: left;
@@ -1565,11 +1308,7 @@ a.meanmenu-reveal {
 
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?33275173');
-  src: url('../font/fontello.eot?33275173#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?33275173') format('woff'),
-       url('../font/fontello.ttf?33275173') format('truetype'),
-       url('../font/fontello.svg?33275173#fontello') format('svg');
+  src: url('font/fontello.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
