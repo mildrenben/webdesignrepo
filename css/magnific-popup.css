@@ -33,8 +33,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/*
 ====== Zoom effect ======
-
 */
 .mfp-zoom-in {
   /* start state */
@@ -107,6 +107,7 @@
 .mfp-close, .mfp-arrow, .mfp-preloader, .mfp-counter {
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
 .mfp-loading.mfp-figure {
@@ -142,11 +143,13 @@ button.mfp-close, button.mfp-arrow {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+  -moz-appearance: none;
   display: block;
   outline: none;
   padding: 0;
   z-index: 1046;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
 button::-moz-focus-inner {
   padding: 0;
@@ -341,6 +344,7 @@ img.mfp-img {
       display: inline;
       margin-left: 5px; }
   .mfp-img-mobile .mfp-bottom-bar {
+    background: rgb(0, 0, 0); /* fallback */
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
     margin: 0;
@@ -361,10 +365,11 @@ img.mfp-img {
     width: 35px;
     height: 35px;
     line-height: 35px;
+    background: rgb(0, 0, 0); /* fallback */
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
     text-align: center;
-    padding: 0; } }
+    padding: 0; }
 
 @media all and (max-width: 900px) {
   .mfp-arrow {
