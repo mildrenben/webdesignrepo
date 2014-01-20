@@ -4,7 +4,7 @@
         body {
             background: #364359;
             text-align: center;
-            padding-top: 25px;
+            padding-top: 30%;
         }
 
         p {
@@ -59,6 +59,5 @@
 
     ?>
     <a href="http://www.webdesignrepo.com">webdesignrepo</a>
-
 </body>
 </html>

@@ -1,5 +1,5 @@
 /*!
- * jQuery meanMenu v2.0.5
+ * jQuery meanMenu v2.0.6
  * @Copyright (C) 2012-2013 Chris Wharton (https://github.com/weare2ndfloor/meanMenu)
  *
  */
@@ -24,9 +24,6 @@
  * Find more information at http://www.meanthemes.com/plugins/meanmenu/
  *
  */
-
-
-
 (function ($) {
 	"use strict";
     $.fn.meanmenu = function (options) {
@@ -34,20 +31,21 @@
             meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
             meanMenuContainer: 'body', // Choose where meanmenu will be placed within the HTML
             meanMenuClose: "X", // single character you want to represent the close menu button
-            meanMenuCloseSize: "16px", // set font size of close button
+            meanMenuCloseSize: "18px", // set font size of close button
             meanMenuOpen: "<span /><span /><span />", // text/markup you want when menu is closed
             meanRevealPosition: "right", // left right or center positions
-            meanRevealPositionDistance: "", // Tweak the position of the menu
+            meanRevealPositionDistance: "0", // Tweak the position of the menu
             meanRevealColour: "", // override CSS colours for the reveal background
             meanRevealHoverColour: "", // override CSS colours for the reveal hover
-            meanScreenWidth: "960", // set the screen width you want meanmenu to kick in at
-            meanNavPush: "50px", // set a height here in px, em or % if you want to budge your layout now the navigation is missing.
+            meanScreenWidth: "460", // set the screen width you want meanmenu to kick in at
+            meanNavPush: "", // set a height here in px, em or % if you want to budge your layout now the navigation is missing.
             meanShowChildren: true, // true to show children in the menu, false to hide them
             meanExpandableChildren: true, // true to allow expand/collapse children
             meanExpand: "+", // single character you want to represent the expand for ULs
             meanContract: "-", // single character you want to represent the contract for ULs
             meanRemoveAttrs: false, // true to remove classes and IDs, false to keep them
-            onePage: true // set to true for one page sites
+            onePage: false, // set to true for one page sites
+            removeElements: "" // set to hide page elements
         };
         var options = $.extend(defaults, options);
         
@@ -74,6 +72,7 @@
             var meanContract = options.meanContract;
             var meanRemoveAttrs = options.meanRemoveAttrs;
             var onePage = options.onePage;
+            var removeElements = options.removeElements;
                         
             //detect known mobile/tablet usage
             if ( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/Blackberry/i)) || (navigator.userAgent.match(/Windows Phone/i)) ) {
@@ -84,7 +83,7 @@
             	// add scrollbar for IE7 & 8 to stop breaking resize function on small content sites
                 jQuery('html').css("overflow-y" , "scroll");
             }
-            
+                        
             function meanCentered() {
             	if (meanRevealPosition == "center") {
 	            	var newWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -133,11 +132,13 @@
             	jQuery(meanMenu).show();
             	menuOn = false;
             	meanMenuExist = false;
+            	jQuery(removeElements).removeClass('mean-remove');
             }
             
             //navigation reveal 
             function showMeanMenu() {
                 if (currentWidth <= meanScreenWidth) {
+		            jQuery(removeElements).addClass('mean-remove');        
                 	meanMenuExist = true;
                 	// add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
                 	jQuery(meanContainer).addClass("mean-container");
@@ -149,7 +150,7 @@
             		
             		// remove all classes from EVERYTHING inside meanmenu nav
             		if(meanRemoveAttrs) {
-            			jQuery('nav.mean-nav *').each(function() {
+            			jQuery('nav.mean-nav ul, nav.mean-nav ul *').each(function() {
             				jQuery(this).removeAttr("class");
             				jQuery(this).removeAttr("id");
             			});
@@ -215,6 +216,7 @@
 	                    }    
                         $navreveal.toggleClass("meanclose");
                         meanInner();
+                        jQuery(removeElements).addClass('mean-remove');
                     });
                     
                     // for one page websites, reset all variables...

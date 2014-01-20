@@ -10,8 +10,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -22,7 +22,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -58,7 +58,7 @@ table {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2F3D54;
+    background: #2F3D54; 
 }
 
 
@@ -76,7 +76,7 @@ a, a:active, a:focus {
     src: url(font/gotham-medium.eot) format('embedded-opentype'),
 	     url(font/gotham-medium.svg#GothamMedium) format('svg'),
          url(font/gotham-medium.woff) format('woff'),
-         url(font/gotham-medium.ttf) format('truetype');
+         url(font/gotham-medium.ttf) format('truetype');      
 }
 
 @font-face {
@@ -86,7 +86,7 @@ a, a:active, a:focus {
 		 url(font/gotham-bold.svg#GothamBold) format('svg'),
          url(font/gotham-bold.woff) format('woff'),
          url(font/gotham-bold.ttf) format('truetype');
-
+         
 }
 
 
@@ -171,7 +171,7 @@ ul {
     vertical-align: top;
 }
 
-
+    
 
 /* Main Content */
 li {
@@ -192,143 +192,143 @@ li {
 	.title {
 		font-size: 1.55rem;
 	}
-
+	
     nav a {
         font-size: 0.9rem;
     }
-
+    
 	p a {
 		font-size: 0.7rem;
 	}
-
+    
 
 	a {
 		font-size: 0.8rem;
 		line-height: 125%;
 	}
-
+	
 	h3 {
 		font-size: 1.1rem;
 	}
-
+	
 	h5 {
 		font-size: 0.8rem;
 	}
-
+		
 	/* Layout */
 	.nav-bar {
 		height: 100vh;
 	}
-
+	
 	.add-bar {
 		height: 100vh;
 		overflow-y: scroll;
 	}
-
+	
 	.main-content {
 		height: 100vh;
 		overflow-y: scroll;
 	}
-
+    
     #blogs-news, #inspiration, #learning, #tutorials, #snippets, #plugins, #architecture, #tools, #resources, #community {
         margin-top: 115px;
     }
-
+	
 	.top-pad {
 		padding-top: 4.4vh;
 	}
-
+	
 	.top-pad-half {
 		padding-top: 2.2vh;
 	}
-
+	
 	.top-pad-quarter {
 		padding-top: 1.1vh !important;
 	}
-
+	
 	.lr-pad {
 		padding: 0 1vw;
 	}
-
+	
 	.l-pad {
 		padding-left: 1vw;
 	}
-
+	
 	.r-pad {
 		padding-right: 1vw;
 	}
-
+	
 	/* Nav Bar */
     nav li {
         line-height: 1.8;
         padding-top: 0.3vh;
     }
-
+    
 	.social-icons-pad {
 		padding-top: 1vh;
 		padding-bottom: 6vh;
 	}
-
+	
 	.nav-link {
 		padding: 1vh 0;
 	}
-
+    
     .button-wrap {
         position: fixed;
         bottom: 0;
         margin-left: 3vw;
         margin-bottom: 1.7vh;
     }
-
+	
 	.submit-button {
 		background: #61C291;
         padding: 5px 8px;
         display: inline;
 	}
-
+	
 	.submit-button:hover, .info-button:hover {
 		opacity: 0.9;
 	}
-
+    
     .info-button {
 		background: #7CB0CC;
         padding: 5px 7px;
         display: inline;
 	}
-
+    
 	/* Add Bar */
 	.add-bar .row .columns .title {
 		padding-bottom: 1.9vh;
-	}
-
+	}	
+    
     .additions-container li {
         padding-bottom: 2.2vh;
     }
-
+    
     .additions-container li>a {
         font-size: 0.9rem;
         padding-top: 1vh;
     }
-
+    
     .additions-container li h5{
         padding-left: 0 !important;
         padding-top: 0.5vh;
     }
-
+	
 	/* Main Content */
 	li {
 		padding-left: 0;
 		padding-bottom: 0.6vh;
 	}
-
+	
 	ul ul li, ul li h5 {
 		padding-left: 1vh !important;
 	}
-
+    
     .small-6.large-3.columns.top-pad-half {
         margin-bottom: 1.5vh;
     }
-
+    
     /* Modals */
     #submit-form {
         width: 33vw;
@@ -339,7 +339,7 @@ li {
         background: #4a5b79;
         color: #F2EFE9;
     }
-
+    
 
     #submit-form input[type=submit] {
         background: #61C291;
@@ -349,7 +349,7 @@ li {
         padding: 5px 8px;
         margin: 20px 0 0;
     }
-
+    
     #submit-form fieldset {
         margin-left: 0;
         padding-left: 0;
@@ -361,13 +361,13 @@ li {
         line-height: 120%;
         margin: 10px 0 16px;
     }
-
+    
     #info-modal li {
         padding: 0 0 14px 14px;
         color: #F2EFE9;
         font-size: 0.9em;
     }
-
+    
     #info-modal {
         width: 33vw;
         height: auto;
@@ -386,11 +386,11 @@ li {
         background: #4a5b79;
     }
 
-
+    
     .flattr-button, .cryptocoin-button {
         padding: 5px 8px;
     }
-
+    
     .paypal-form-wrap {
         display: inline;
     }
@@ -403,7 +403,7 @@ li {
         font-size: 0.8rem;
         padding: 5px 7px;
     }
-
+    
     .flattr-button{
         background: #e6a423;
     }
@@ -419,89 +419,89 @@ li {
 	.title {
 		font-size: 1.1rem;
 	}
-
+	
     nav a {
         font-size: 1rem;
     }
-
+    
 	p a {
 		font-size: 0.7rem;
 	}
-
+	
 	a {
 		font-size: 0.9rem;
 		line-height: 120%;
 	}
-
+	
 	h3 {
 		font-size: 1.1rem;
 	}
-
+	
 	h5 {
 		font-size: 0.8rem;
 	}
-
+		
 	/* Layout */
 	.nav-bar {
 		height: 100vh;
 	}
-
+	
 	.add-bar {
 		height: 100vh;
 		overflow-y: scroll;
 	}
-
+	
 	.main-content {
 		height: 100vh;
 		overflow-y: scroll;
 	}
-
+	
 	.top-pad {
 		padding-top: 4.8vh;
 	}
-
+	
 	.top-pad-half {
 		padding-top: 2.4vh;
 	}
-
+	
 	.top-pad-quarter {
 		padding-top: 1.2vh !important;
 	}
-
+	
 	.lr-pad {
 		padding: 0 1.3vw;
 	}
-
+	
 	.l-pad {
 		padding-left: 1.3vw;
 	}
-
+	
 	.r-pad {
 		padding-right: 1.3vw;
 	}
-
+	
 	/* Nav Bar */
     nav li {
         line-height: 1.8;
         padding-top: 0.3vh;
     }
-
+    
 	.social-icons-pad {
 		padding-top: 1.5vh;
 		padding-bottom: 7vh;
 	}
-
+	
 	.nav-link {
 		padding: 1vh 0;
 	}
-
+    
     .button-wrap {
         position: fixed;
         bottom: 0;
         left: 2vw;
         margin-bottom: 1.2vh;
     }
-
+	
 	.submit-button {
 		background: #61C291;
         width: 100%;
@@ -509,51 +509,51 @@ li {
         margin-bottom: 5px;
         display: block;
 	}
-
+	
 	.submit-button:hover, .info-button:hover {
 		opacity: 0.9;
 	}
-
+    
     .info-button {
 		background: #7CB0CC;
         padding: 8px 11px;
         width: 100%;
         display: block;
 	}
-
+    
 	/* Add Bar */
 	.add-bar .row .columns .title {
 		padding-bottom: 2vh;
-	}
-
+	}	
+    
     .additions-container li {
         padding-bottom: 2.5vh;
     }
-
+    
     .additions-container li>a {
         font-size: 0.8rem;
         padding-top: 1vh;
     }
-
+    
     .additions-container li h5{
         padding-left: 0 !important;
         padding-top: 0.2vh;
     }
-
+	
 	/* Main Content */
 	li {
 		padding-left: 0;
 		padding-bottom: 0.6vh;
 	}
-
+	
 	ul ul li, ul li h5 {
 		padding-left: 1vh !important;
 	}
-
+    
     .small-6.large-3.columns.top-pad-half {
         margin-bottom: 2.8vh;
     }
-
+    
     /* Modals */
    #submit-form {
         width: 33vw;
@@ -564,7 +564,7 @@ li {
         background: #4a5b79;
         color: #F2EFE9;
     }
-
+    
 
     #submit-form input[type=submit] {
         background: #61C291;
@@ -574,25 +574,25 @@ li {
         padding: 5px 8px;
         margin: 20px 0 0;
     }
-
+    
     #submit-form fieldset {
         margin-left: 0;
         padding-left: 0;
     }
 
-
+    
     #info-modal li {
         padding: 0 0 14px 14px;
         color: #F2EFE9;
         font-size: 0.9em;
     }
-
+    
     p {
         color: #F2EFE9;
         font-size: 0.9em;
         margin: 19px 0;
     }
-
+    
      #info-modal {
         width: 70vw;
         height: auto;
@@ -637,7 +637,7 @@ li {
     .cryptocoin-button {
         background: #61C291;
     }
-}
+}	
 
 
 
@@ -647,147 +647,147 @@ li {
 	.title {
 		font-size: 1.6rem;
 	}
-
+    
     .main-content .title {
         padding-top: 70px !important;
         padding-bottom: 15px;
         text-align: center;
     }
-
+	
 	p {
 		font-size: 1rem !important;
 	}
-
+	
 	p a {
 		font-size: 1rem;
 	}
-
+	
 	a {
 		font-size: 1rem;
 		line-height: 135%;
 	}
-
+	
 	h3 {
 		font-size: 1.2rem;
 	}
-
+	
 	h5 {
 		font-size: 1rem;
 	}
-
+	
 	/* Layout */
     .add-bar {
         height: 250px;
         width: 100%;
 	}
-
+    
     .additions-container {
         width: 100%;
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
     }
-
+    
     .top-pad {
 		padding-top: 30px;
 	}
-
+	
 	.top-pad-half {
 		padding-top: 15px;
 	}
-
+	
 	.top-pad-quarter {
 		padding-top: 8px !important;
 	}
-
+	
 	.lr-pad {
 		padding-left: 12px;
 		padding-right: 12px;
 	}
-
+	
 	.l-pad {
 		padding-left: 12px;
 	}
-
+	
 	.r-pad {
 		padding-right: 12px;
 	}
-
+	
 	.social-icons-pad {
-		padding-top: 18px;
+		padding-top: 16px;
         text-align: center;
     }
-
+    
     .icon-facebook {
-        padding-right: 12px !important;
+        padding-right: 18px !important;
     }
-
+    
     .icon-github {
-        padding-left: 12px !important;
+        padding-left: 16px !important;
     }
-
+    
     /* Nav-Bar */
     .button-wrap {
-        padding-top: 5px;
-        padding-bottom: 25px;
+        padding-top: 25px;
+        padding-bottom: 35px;
         text-align: center;
     }
-
+    
     .submit-button {
 		background: #8AD19D;
         padding: 5px 5px;
         display: inline;
 	}
-
+	
 	.submit-button:hover, .info-button:hover {
 		opacity: 0.9;
 	}
-
+    
     .info-button {
 		background: #80ADBD;
         padding: 5px 5px;
         display: inline;
 	}
-
-    nav div a{
-        display: block;
-        float: none;
-        width: 100%;
+    
+    nav div a{  
+        display: block;  
+        float: none;  
+        width: 100%;  
     }
-
+    
     #logo {
         text-align: center;
         margin-top: 31px;
         font-size: 1.5rem;
     }
-
+    
     /* Main Content */
 	li {
 		padding-left: 0;
 		padding-bottom: 8px;
 	}
-
+    
     .small-6.large-3.columns.top-pad-half {
         margin-bottom: 12px;
     }
-
+    
     .main-content .title {
         padding: 20px 0;
     }
-
+    
     .main-content .small-6 {
         padding-left: 4% !important;
     }
+    
 
-
-
+    
     /* Add Bar */
     .additions-container li {
         display: inline-block !important;
         width: auto;
-        height: 120px;
-        padding-top: 36px;
-        margin-left: 20px !important;
+        height: auto;
+        padding-top: 12px;
+        margin-left: 16px !important;
         margin-right: 45px;
         white-space: normal;
     }
@@ -796,18 +796,18 @@ li {
         padding-left: 0 !important;
         padding-top: 4px;
     }
-
+    
     .add-bar .title {
         margin-left: 5px !important;
         padding-top: 5px;
         padding-bottom: 5px;
         text-align: center;
     }
-
+    
     .add-bar li>a {
         font-size: 1rem;
     }
-
+    
     /* Modals */
     #submit-form {
         width: 70%;
@@ -822,7 +822,7 @@ li {
     input[type="text"] {
         width: 150%;
     }
-
+    
 
     #submit-form input[type=submit] {
         background: #61C291;
@@ -832,25 +832,25 @@ li {
         padding: 5px 8px;
         margin: 20px 0 0;
     }
-
+    
     #submit-form fieldset {
         margin-top: 10px;
         margin-left: 0;
         padding-left: 0;
     }
-
+    
     p {
         color: #F2EFE9;
         font-size: 0.8em;
         margin: 19px 0;
     }
-
+    
     #info-modal li {
         padding: 0 0 14px 14px;
         color: #F2EFE9;
         font-size: 1em;
     }
-
+    
      #info-modal {
         width: 90%;
         height: auto;
@@ -868,12 +868,12 @@ li {
         text-align: left;
         background: #4a5b79;
     }
-
+    
     .flattr-button, .cryptocoin-button {
         padding: 10px 12px;
         display: block;
     }
-
+    
     .flattr-button{
         background: #e6a423;
         margin-top: 10px;
@@ -903,164 +903,165 @@ li {
 	.title {
 		font-size: 1.6rem;
 	}
-
+    
     .main-content .title {
         padding-top: 70px !important;
         padding-bottom: 10px;
         text-align: center;
     }
-
+	
 	p {
 		font-size: 1rem !important;
 	}
-
+	
 	p a {
 		font-size: 1rem;
 	}
-
+	
 	a {
 		font-size: 1rem;
 		line-height: 130%;
 	}
-
+	
 	h3 {
 		font-size: 1.2rem;
 	}
-
+	
 	h5 {
 		font-size: 1rem;
 	}
-
+	
 	/* Layout */
     .add-bar {
-        height: 280px;
+        height: 240px;
         width: 100%;
 	}
-
+    
     .additions-container {
         width: 100%;
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
     }
-
+    
     .top-pad {
 		padding-top: 30px;
 	}
-
+	
 	.top-pad-half {
 		padding-top: 15px;
 	}
-
+	
 	.top-pad-quarter {
 		padding-top: 8px !important;
 	}
-
+	
 	.lr-pad {
 		padding-left: 8px;
 		padding-right: 8px;
 	}
-
+	
 	.l-pad {
 		padding-left: 8px;
 	}
-
+	
 	.r-pad {
 		padding-right: 8px;
 	}
-
+	
 	.social-icons-pad {
 		padding-top: 15px;
         text-align: center;
     }
-
+    
     .icon-facebook {
-        padding-right: 12px !important;
+        padding-right: 14px !important;
     }
-
+    
     .icon-github {
-        padding-left: 12px !important;
+        padding-left: 14px !important;
     }
-
+    
     /* Nav-Bar */
     .button-wrap {
-        padding-bottom: 40px;
+        padding-top: 25px;
+        padding-bottom: 30px;
         text-align: center;
     }
-
+    
     .submit-button {
 		background: #8AD19D;
         padding: 5px 5px;
         display: inline;
 	}
-
+	
 	.submit-button:hover, .info-button:hover {
 		opacity: 0.9;
 	}
-
+    
     .info-button {
 		background: #80ADBD;
         padding: 5px 5px;
         display: inline;
 	}
-
-    nav div a{
-        display: block;
-        float: none;
-        width: 100%;
+    
+    nav div a{  
+        display: block;  
+        float: none;  
+        width: 100%;  
     }
-
+    
     #logo {
         text-align: center;
         margin-top: 31px;
         font-size: 1.5rem;
     }
-
+    
     /* Main Content */
 	li {
 		padding-left: 0;
 		padding-bottom: 5px;
 	}
-
+    
     .small-6.large-3.columns.top-pad-half {
         margin-bottom: 8px;
     }
-
+    
     .main-content .title {
         padding: 30px 0;
     }
-
+    
     .main-content .small-6 {
         padding-left: 12px !important;
     }
+    
 
-
-
+    
     /* Add Bar */
     .additions-container li {
         display: inline-block !important;
         width: auto;
-        height: 140px;
-        padding-top: 50px;
-        margin-left: 10px;
+        height: auto;
+        margin-left: 8px;
         margin-right: 45px;
+        padding-bottom: 10px;
         white-space: normal;
     }
 
     .additions-container li h5 {
         padding-left: 0 !important;
     }
-
+    
     .add-bar .title {
         padding-top: 10px;
-        padding-bottom: 6px;
+        padding-bottom: 2px;
         text-align: center;
     }
-
+    
     .add-bar li>a {
         font-size: 1rem;
     }
-
+    
     /* Modals */
     #submit-form {
         width: 90%;
@@ -1075,7 +1076,7 @@ li {
     input[type="text"] {
         width: 100%;
     }
-
+    
 
     #submit-form input[type=submit] {
         background: #61C291;
@@ -1085,25 +1086,25 @@ li {
         padding: 5px 8px;
         margin: 20px 0 0;
     }
-
+    
     #submit-form fieldset {
         margin-top: 10px;
         margin-left: 0;
         padding-left: 0;
     }
-
+    
     p {
         color: #F2EFE9;
         font-size: 0.8em;
         margin: 19px 0;
     }
-
+    
     #info-modal li {
         padding: 0 0 14px 14px;
         color: #F2EFE9;
         font-size: 1em;
     }
-
+    
      #info-modal {
         width: 90%;
         height: auto;
@@ -1122,12 +1123,12 @@ li {
         text-align: left;
         background: #4a5b79;
     }
-
+    
     .flattr-button, .cryptocoin-button {
         padding: 10px 12px;
         display: block;
     }
-
+    
     .flattr-button{
         background: #e6a423;
         margin-top: 10px;
@@ -1322,37 +1323,37 @@ a.meanmenu-reveal {
   }
 }
 */
-
+ 
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
-
+ 
   display: inline-block;
   text-decoration: inherit;
   width: 0.5em;
 
   text-align: center;
   /* opacity: .8; */
-
+ 
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-
+     
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
-
+ 
   /* Animation center compensation - magrins should be symmetric */
   /* remove if not needed */
-
+ 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
-
+ 
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-
+ 
 .icon-facebook:before { content: '\f052'; } /* '' */
 .icon-github:before { content: '\f055'; } /* '' */
 .icon-twitter:before { content: '\f058'; } /* '' */
@@ -1430,7 +1431,7 @@ img {
 
 .hide {
   display: none; }
-
+  
  .antialiased {
   -webkit-font-smoothing: antialiased; }
 
