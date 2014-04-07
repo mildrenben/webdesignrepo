@@ -1684,23 +1684,20 @@
 <script src="js/jquery.magnific-popup.js"></script>
 <script>
     $(document).ready(function () {
-        jQuery('nav').meanmenu({ onePage: true, meanScreenWidth: "960", meanMenuCloseSize: "16px" });
+        $('nav').meanmenu({ onePage: true, meanScreenWidth: "960", meanMenuCloseSize: "16px" });
 
         // Click event for any anchor tag that's href starts with #
-        $('a[href^="#"]').click(function (e) {
-            e.preventDefault();
-            // calculate destination place
-            var scrollDest = $(this.hash)[0].offsetTop;
+        $('nav a[href^="#"]').click(function(e) {
+            if ($(window).width() > 960) {
+                e.preventDefault();
+                // calculate destination place
+                var scrollDest = $(this.hash)[0].offsetTop;
 
-            if ($(window).width() < 960) {
-                console.log("window is less than 960px");
-                scrollDest -= 60;
+                // go to destination
+                $('.main-content').animate({
+                    scrollTop: scrollDest
+                });
             }
-
-            // go to destination
-            $('.main-content').animate({
-                scrollTop: scrollDest
-            }, 650, 'swing');
         });
 
         $('#inline-popups, #info-modal').magnificPopup({

@@ -776,10 +776,6 @@ li {
         padding: 20px 0;
     }
     
-    .main-content .small-6 {
-        padding-left: 4% !important;
-    }
-    
 
     
     /* Add Bar */
@@ -1224,9 +1220,9 @@ a.meanmenu-reveal {
 	display: block;
 	float: left;
 	width: 100%;
-	padding: 1em 2%;
+	padding: .2em 2%;
 	margin: 0;
-	text-align: left;
+	text-align: center;
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
