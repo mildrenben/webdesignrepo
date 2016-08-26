@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 gulp.task('minify-css', function(){
 	return gulp.src('./src/css/*.css')
 	.pipe(minifyCSS())
-	.pipe(gulp.dest('./prod/css/'));
+	.pipe(gulp.dest('./docs/css/'));
 });
 
 gulp.task('minify-html', function(){
@@ -13,7 +13,7 @@ gulp.task('minify-html', function(){
 	.pipe(htmlmin({
 		collapseWhitespace: true
 	}))
-	.pipe(gulp.dest('./prod/'));
+	.pipe(gulp.dest('./docs/'));
 });
 
 gulp.task('default', ['minify-html']);
