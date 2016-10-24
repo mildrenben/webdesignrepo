@@ -1,0 +1,103 @@
+include data/webdesign/data_webdesign.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    link(rel='icon', href='img/icon.png', type='image/png')
+    title webdesignrepo - a compact list of helpful webdesign links
+    meta(name='description', content='The best of webdesign, all in one place. webdesignrepo is a curated collection of helpful links from around the web for beginners and veterans alike. Primarily the repo is for webdesign links, but there is a large overlap with web development and graphic design.')
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    base(target='_blank')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  body
+    header.TopBar(role='banner')
+      a(href="/" target="_self")
+        h1.TopBar_Logo webdesignrepo
+      nav.TopBar_Repos(role='navigation')
+        h2(role='menuitem').active
+          a(href='/') WebDesign
+        h2(role='menuitem')
+          a(href='/') Frontend
+        h2(role='menuitem')
+          a(href='/') Startups
+      div.TopBar_Social(aria-label='Social Media Links')
+        a(href='http://www.facebook.com/webdesignrepowebsite')
+          i.fa.fa-facebook(aria-hidden='true')
+        a(href='https://twitter.com/webdesignrepo')
+          i.fa.fa-twitter(aria-hidden='true')
+        a(href='https://github.com/mildrenben/webdesignrepo')
+          i.fa.fa-github(aria-hidden='true')
+
+    aside.SideNav
+      div.SideNav_Tabs.SideNav_Tabs--tab1(role='tablist')
+        button#tab-1.SideNav_Tab(role='tab', aria-controls='panel-1') Sections
+        button#tab-2.SideNav_Tab(role='tab', aria-controls='panel-2') New
+          span.SideNav_RecentNumber
+        span.SideNav_TabUnderscore(aria-hidden='true')
+      .SideNav_PanelWrap
+        .SideNav_Panel.SideNav_Panel-1.SideNav_Panel--visible#panel-1(role='tabpanel', aria-labelledby='tab-1', aria-hidden='false')
+          nav(role='navigation')
+            ul.SideNav_Categories(role='menu')
+              each category in data
+                  li(role='menuitem')
+                    a(href="#"+category.id target="_self")= category.title
+        .SideNav_Panel.SideNav_Panel-2#panel-2(role='tabpanel', aria-labelledby='tab-2', aria-hidden='true')
+          ul.SideNav_Recent
+      div.SideNav_Info
+        button#SubmitBtn.SideNav_SubmitBtn Submit
+
+    div.SubmitModal(aria-controlledby='SubmitBtn', aria-label='Submit Modal', aria-hidden='true')
+      div.SubmitModal_Backdrop(aria-hidden='true')
+      div.SubmitModal_Content
+        i.fa.fa-times(aria-hidden='true')
+        p Think we've missed something cool? We'd love your input!
+        p Tweet us at
+          | &nbsp;#[a(href='https://twitter.com/webdesignrepo') @webdesignrepo], make an issue on
+          | #[a(href='https://github.com/mildrenben/webdesignrepo') Github]
+          | or drop us a message on
+          | #[a(href='http://www.facebook.com/webdesignrepowebsite') Facebook].
+
+    main.Links(role="main")
+      each category in data
+        div.Links_Cat(id=category.id)
+          h4.Links_CatTitle= category.title
+          div.Links_SubCats
+            each subCat in category.subCats
+              div.Links_SubCat
+                h3.Links_SubCatTitle= subCat.title
+                ul.Links_SubCatList
+                  each link in subCat.links
+                    if link.paid
+                      if link.book
+                        li #[a(href=link.url class="Links_Link" data-date=link.date)= link.name] <span class="Links_Tag Links_Tag--dollar">$</span> <span class="Links_Tag Links_Tag--book">B</span>
+                      else
+                        li  #[a(href=link.url class="Links_Link" data-date=link.date)= link.name] <span class="Links_Tag Links_Tag--dollar">$</span>
+                    else if link.book
+                      li  #[a(href=link.url class="Links_Link" data-date=link.date)= link.name] <span class="Links_Tag Links_Tag--book">B</span>
+                    else
+                      li #[a(href=link.url class="Links_Link" data-date=link.date)= link.name]
+    div.Notification
+      i.fa.fa-times.Notification_Close(aria-hidden='true')
+      p.Notification_Message We look different, right?
+      p.Notification_Message webdesignrepo is back in business. New design, new features and new subrepos.
+      p.Notification_Message We've trimmed the fat and left the best of the best, as it's meant to be.
+      p.Notification_Message Check out the details #[a(href="/") here on Medium].
+
+
+
+
+
+    script(type='text/javascript', src='./js/main.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js')
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39874852-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

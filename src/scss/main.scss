@@ -1,0 +1,29 @@
+@import './_reset';
+@import './_commons';
+@import './TopBar';
+@import './SideNav';
+@import './Links';
+@import './Misc';
+@import './Email';
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: $light-grey;
+}
+
+@media screen and (min-width: $largeDesktop) {
+  html {
+    font-size: 10.5px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}

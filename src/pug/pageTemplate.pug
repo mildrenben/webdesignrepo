@@ -1,0 +1,169 @@
+doctype html
+html(lang="en")
+  head
+    include ./head.pug
+    base(target='_blank')
+  body
+    script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+    script.
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1810648748620087",
+        enable_page_level_ads: true
+      });
+    header.TopBar(role='banner')
+      a.TopBar_LogoWrap(href="/" target="_self")
+        h1.TopBar_Logo
+          span.TopBar_LogoDesktop webdesignrepo
+          span.TopBar_LogoMobile w
+      nav.TopBar_Repos(role='navigation' class="TopBar_Repos--" + pageTitle)
+        h2.TopBar_Repo.TopBar_Repo--WebDesign(role='menuitem')
+          a(href='/' target="_self") WebDesign
+        h2.TopBar_Repo.TopBar_Repo--FrontEnd(role='menuitem')
+          a(href='/frontend.html' target="_self") Frontend
+        h2.TopBar_Repo.TopBar_Repo--Startups(role='menuitem')
+          a(href='/startups.html' target="_self") Startups
+      div.TopBar_Categories
+        each category in data
+          h5.TopBar_Category= category.title
+      div.TopBar_Hamburger
+        i.fa.fa-bars(aria-hidden="true")
+      div.TopBar_Social(aria-label='Social Media Links')
+        a.TopBar_SocialLink.TopBar_SocialLink--patreon(href="https://www.patreon.com/user?u=4147601")
+          include ./patreonimg
+        span.TopBar_SocialLink.TopBar_SocialLink--newsletter
+          i.fa.fa-envelope
+        a.TopBar_SocialLink(href='http://www.facebook.com/webdesignrepowebsite')
+          i.fa.fa-facebook(aria-hidden='true')
+        a.TopBar_SocialLink(href='https://twitter.com/webdesignrepo')
+          i.fa.fa-twitter(aria-hidden='true')
+        a.TopBar_SocialLink(href='https://github.com/mildrenben/webdesignrepo')
+          i.fa.fa-github(aria-hidden='true')
+    div.SideNav_Backdrop
+    aside.SideNav
+      div.SideNav_Tabs.SideNav_Tabs--tab1(role='tablist')
+        button#tab-1.SideNav_Tab(role='tab', aria-controls='panel-1') Sections
+        button#tab-2.SideNav_Tab(role='tab', aria-controls='panel-2') New
+          span.SideNav_RecentNumber
+        span.SideNav_TabUnderscore(aria-hidden='true')
+      .SideNav_PanelWrap
+        .SideNav_Panel.SideNav_Panel-1.SideNav_Panel--visible#panel-1(role='tabpanel', aria-labelledby='tab-1', aria-hidden='false')
+          nav(role='navigation')
+            ul.SideNav_Categories(role='menu')
+              each category in data
+                  li(role='menuitem')
+                    a(href="#"+category.id target="_self")= category.title
+        .SideNav_Panel.SideNav_Panel-2#panel-2(role='tabpanel', aria-labelledby='tab-2', aria-hidden='true')
+          ul.SideNav_Recent
+      .SideNav_Social
+        span.TopBar_SocialLink.TopBar_SocialLink--newsletter
+          i.fa.fa-envelope
+        a.TopBar_SocialLink(href='http://www.facebook.com/webdesignrepowebsite')
+          i.fa.fa-facebook(aria-hidden='true')
+        a.TopBar_SocialLink(href='https://twitter.com/webdesignrepo')
+          i.fa.fa-twitter(aria-hidden='true')
+        a.TopBar_SocialLink(href='https://github.com/mildrenben/webdesignrepo')
+          i.fa.fa-github(aria-hidden='true')
+      div.SideNav_Info
+        div.SideNav_Sponsorship
+
+        button#SubmitBtn.SideNav_InfoBtn.SideNav_SubmitBtn Submit
+        button.SideNav_InfoBtn.SideNav_SponsorBtn Sponsor
+
+    div.Modal(aria-controlledby='SubmitBtn', aria-label='Submit Modal', aria-hidden='true')
+      div.Modal_Backdrop(aria-hidden='true')
+      div.Modal_Content
+        i.fa.fa-times(aria-hidden='true')
+        div.Modal_Message.Modal_Message--sponsor.Modal_Message--large
+          p Thinking of sponsoring webdesignrepo? Awesome! We are a highly targeted platform to advertise on with an audience of web designers, web developers and startup enthusiasts.
+          p Here are some options:
+          ul
+            li #[span Email sponsorship] - currently over 2,000 subscribers. Avg open rate of 37.9% and avg click rate of 7.1%.
+            li #[span Website sponsorship] - two potential spots for sponsorship, one always in view in the side navigation and one banner between sections.
+            li #[span Link sponsorship] - sponsor your own link in the repo by highlighting it to stand out more. Note: only applicable to links already on the site. We will not accept payment to be added to the list.
+          p Sponsorship options vary in cost based on campaign length and other factors. Please contact #[a(href="mailto:contact@webdesignrepo.com") us via email] (contact[at]webdesignrepo.com) for more details and pricing.
+        div.Modal_Message.Modal_Message--submit
+          p Think we've missed something cool? We'd love your input!
+          p Tweet us at
+            | &nbsp;#[a(href='https://twitter.com/webdesignrepo') @webdesignrepo], make an issue on
+            | #[a(href='https://github.com/mildrenben/webdesignrepo') Github]
+            | or drop us a message on
+            | #[a(href='http://www.facebook.com/webdesignrepowebsite') Facebook].
+        div.Modal_Message.Modal_Message--newsletter
+          p Join over 2,000 other Designers & Developers!
+          p.Modal_MessageText--small Receive a weekly newsletter of new resources and interesting articles.
+          p.Modal_MessageText--small No spam! #[a(href="/sep-email.html") Click here to see what our emails look like].
+          #mc_embed_signup
+            form(action="//rrrepo.us3.list-manage.com/subscribe/post?u=98616074a58bc97bbcdbdc691&amp;id=661e9be5d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+              #mc_embed_signup_scroll
+                input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required)
+                div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                  input(type="text" name="b_98616074a58bc97bbcdbdc691_661e9be5d1" tabindex="-1" value="")
+                div.EmailSubCatch
+                  input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
+
+    main.Links(role="main")
+      div.Links_AdResponse  We notice you are using AdBlock. If you find webdesignrepo helpful, please consider whitelisting us or donating on #[a(href="https://www.patreon.com/user?u=4147601") Patreon]. Thanks!
+      each category in data
+        div.Links_Cat(id=category.id)
+          h4.Links_CatTitle= category.title
+          div.Links_SubCats
+            each subCat in category.subCats
+              div.Links_SubCat
+                h3.Links_SubCatTitle= subCat.title
+                ul.Links_SubCatList
+                  if subCat.track
+                    div.Links_Tracks
+                      span.Links_TrackTooltip TRACK
+                      each track, idx in subCat.track
+                        div(class="Links_Track Links_Track--amount" + track + " Links_Track--num" + idx)
+                          span(class="Links_TrackNum")= idx
+
+                  each link in subCat.links
+                    li(style="order: " + link.track)
+                      if link.urls
+                        p.Links_Link.Links_Link--dummy(data-date=link.date)= link.name
+                        div.Links_SubLinks
+                          each url in link.urls
+                            a.Links_SubLink(href=url.url)= url.name
+                      else
+                        a(href=link.url class="Links_Link" data-date=link.date)= link.name
+                      if link.paid
+                        span.Links_Tag.Links_Tag--dollar $
+                      if link.book
+                        span.Links_Tag.Links_Tag--book B
+    nav.BottomBar_Repos(role='navigation' class="TopBar_Repos--" + pageTitle)
+      h2.TopBar_Repo.TopBar_Repo--WebDesign(role='menuitem')
+        a(href='/' target="_self") WebDesign
+      h2.TopBar_Repo.TopBar_Repo--FrontEnd(role='menuitem')
+        a(href='/frontend.html' target="_self") Frontend
+      h2.TopBar_Repo.TopBar_Repo--Startups(role='menuitem')
+        a(href='/startups.html' target="_self") Startups
+    div.Notification
+      i.fa.fa-times.Notification_Close(aria-hidden='true')
+      p.Notification_Message We look different, right?
+      p.Notification_Message webdesignrepo is back in business. New design, new features and new subrepos.
+      p.Notification_Message We've trimmed the fat and left the best of the best, as it's meant to be.
+      p.Notification_Message Check out the details #[a(href="https://medium.com/@mildrenben/webdesignrepo-v2-0-60c2a722c472#.uhyxuzhk3") here on Medium].
+
+
+
+
+
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js')
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+    script(type='text/javascript', src='./js/main.js')
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39874852-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+    script.
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1810648748620087",
+        enable_page_level_ads: true
+      });

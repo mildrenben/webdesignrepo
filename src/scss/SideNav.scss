@@ -1,0 +1,280 @@
+@import './_commons';
+
+.SideNav {
+  position: fixed;
+  top: $TopBarHeight;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: $SideNavWidth;
+  background: $white;
+  height: calc(100vh - #{$TopBarHeight)});
+  display: flex;
+  flex-direction: column;
+  &_Tabs {
+    width: 100%;
+    height: $TopBarHeight - .5;
+    position: relative;
+    &--tab1 {
+      .SideNav_Tab:first-of-type {
+        color: $med-blue;
+      }
+    }
+    &--tab2 {
+      .SideNav_Tab:nth-of-type(2) {
+        color: $med-blue;
+      }
+      .SideNav_TabUnderscore {
+        transform: translateX(100%);
+      }
+    }
+  }
+  &_Tab {
+    width: 50%;
+    display: inline-block;
+    font-weight: 400;
+    height: 100%;
+    font-size: 1.1rem;
+    color: $grey;
+    border-bottom: solid 1px $light-grey-1;
+  }
+  &_TabUnderscore {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background: $orange;
+    box-shadow: 0 0 9px 1px rgba($orange,0.2);
+    height: 2px;
+    z-index: 2;
+    transition: transform 0.15s ease-in-out;
+    transform: translateX(0%);
+  }
+  &_PanelWrap {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 15em);
+  }
+  &_Panel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: transform 0.2s ease;
+    height: 100%;
+    overflow-y: auto;
+  }
+  &_Panel-1 {
+    &.SideNav_Panel--visible {
+      transform: translateX(0);
+    }
+    &:not(.SideNav_Panel--visible) {
+      transform: translateX(-100%);
+    }
+  }
+  &_Panel-2 {
+    &.SideNav_Panel--visible {
+      transform: translateX(0);
+    }
+    &:not(.SideNav_Panel--visible) {
+      transform: translateX(100%);
+    }
+  }
+  &_Recent {
+    list-style: none;
+    padding: .8em;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    &Item {
+      font-size: 0.85em;
+      padding: 1em 1em .9em;
+      position: relative;
+      &--unseen {
+        &:before {
+          $size: 6px;
+          content: '';
+          width: $size;
+          height: $size;
+          position: absolute;
+          left: 0;
+          top: 1.34em;
+          background: $orange;
+          border-radius: $size;
+          animation: pulse 5s linear forwards;
+        }
+      }
+    }
+    &Link {
+      @include link;
+      font-size: .95em;
+    }
+    &Date {
+      display: block;
+      font-size: 0.8em;
+      color: $grey;
+      opacity: 0.5;
+      margin-top: -0.4em;
+    }
+    &NoItems {
+      padding: 1.2rem 1.2rem 1rem;
+      color: $grey;
+      display: block;
+      &:first-of-type {
+        font-size: 0.9em;
+        margin-bottom: 1em;
+      }
+      &:nth-child(2) {
+        font-size: 0.75em;
+        line-height: 150%;
+        opacity: 0.6;
+      }
+    }
+    &Number {
+      opacity: 0;
+      position: absolute;
+      display: inline-block;
+      background: #F28374;
+      color: white;
+      border-radius: 50%;
+      width: 1.8em;
+      height: 1.8em;
+      font-size: .8em;
+      text-align: center;
+      line-height: 1.8em;
+      margin-top: -.55em;
+      margin-left: .55em;
+      box-shadow: 0 0 9px 1px rgba(242,131,116,.2);
+      &--visible {
+        animation: bounceIn .5s linear .5s forwards;
+      }
+    }
+  }
+  &_Categories {
+    padding: .9em;
+    list-style: none;
+    font-size: 1.6rem;
+    width: 100%;
+    box-sizing: border-box;
+    li {
+      font-size: .8em;
+      width: 100%;
+      a {
+        color: $grey;
+        width: 100%;
+        box-sizing: border-box;
+        padding: .75em .8em;
+        margin: .22em 0;
+        border-radius: 0.3em;
+        display: inline-block;
+        &:hover {
+          background: $light-grey;
+        }
+      }
+    }
+  }
+  &_Info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    border-top: solid 1px $light-grey-1;
+    height: 15em;
+    margin-top: auto;
+  }
+  &_InfoBtn {
+    border: solid 1px $grey;
+    color: $grey;
+    border-radius: 0.4rem;
+    padding: .8em 1.4em;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.35;
+    transition: all 0.2s ease-out;
+    &:hover {
+      opacity: 1;
+      color: $white;
+    }
+  }
+  &_SubmitBtn {
+    margin-right: 1rem;
+    &:hover {
+      border-color: $orange;
+      background: $orange;
+      box-shadow: 0 0 10px 2px rgba($orange,0.25);
+    }
+  }
+  &_SponsorBtn {
+    &:hover {
+      $foo: #81CFE0;
+      border-color: $foo;
+      background: $foo;
+      box-shadow: 0 0 9px 2px rgba($foo,0.25);
+    }
+  }
+  &_Backdrop,
+  &_Social {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .SideNav {
+    left: 0;
+    transform: translateX(-($SideNavWidth + 4rem));
+    height: 100%;
+    width: 23rem;
+    top: 0;
+    transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 5;
+    box-shadow: 0 3px 7px 1px rgba(0,0,0,0.1);
+    &--visible {
+      transform: translateX(0);
+    }
+    &_Backdrop {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.2);
+      z-index: 4;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      &--visible {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+    &_Tabs {
+      height: 6rem;
+    }
+    &_PanelWrap {
+      height: calc(100% - 19em);
+    }
+    &_Social {
+      height: 4rem;
+      border-top: solid 1px $light-grey-1;
+      display: block;
+      font-size: 1.3rem;
+      .TopBar_SocialLink {
+        width: 25%;
+        height: 100%;
+        text-align: center;
+        display: inline-block;
+        border-right: solid 1px $light-grey-1;
+        box-sizing: border-box;
+        color: rgba($light-blue, 0.9);
+        &:last-child {
+          border: none;
+        }
+        i {
+          line-height: 4rem;
+        }
+      }
+    }
+  }
+}

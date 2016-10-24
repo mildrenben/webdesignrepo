@@ -1,0 +1,24 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: 'Montserrat', sans-serif;
+  &:focus {
+    outline: none;
+  }
+}

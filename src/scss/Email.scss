@@ -1,0 +1,58 @@
+@import './_commons';
+
+.Email {
+  width: 40em;
+  margin: 5em auto;
+  &_ReturnLink {
+    font-size: 1.5em;
+    color: $med-blue;
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    i {
+      margin-right: .3em;
+    }
+  }
+  &_Top {
+    font-size: 1.6em;
+    p:nth-of-type(2) {
+      margin-top: 3.5em;
+    }
+  }
+  &_Container {
+    border: solid 1px $light-grey-1;
+    border-radius: .5em;
+    overflow: hidden;
+    margin-top: .8em;
+    background: $white;
+    padding-bottom: 3em;
+  }
+  &_Header {
+    background: $med-blue;
+    color: $orange;
+    width: 100%;
+    font-size: 1.6em;
+    letter-spacing: 0.5px;
+    padding: 1em 0;
+    text-align: center;
+  }
+  &_Section {
+    margin-top: 2em;
+    width: 100%;
+    padding: 0 2em;
+    &Title {
+      color: $med-blue;
+      font-size: 1.8em;
+      text-decoration: underline;
+      margin-bottom: .9em;
+    }
+    &:not(:first-of-type) {
+      margin-top: 4em;
+    }
+  }
+  &_Item {
+    font-size: 1.4em;
+    margin-bottom: .7em;
+    display: block;
+  }
+}

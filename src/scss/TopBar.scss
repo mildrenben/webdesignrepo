@@ -1,0 +1,160 @@
+@import './_commons';
+
+.TopBar {
+  display: flex;
+  width: 100%;
+  height: $TopBarHeight;
+  background-color: $med-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &_Logo,
+  &_Repos,
+  &_Social {
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  &_LogoWrap {
+    height: 100%;
+  }
+  &_Logo {
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    width: $SideNavWidth;
+    color: $orange;
+    background: $dark-blue;
+    &Mobile {
+      display: none;
+    }
+  }
+  &_Repos {
+    flex: 1;
+  }
+  &_Hamburger,
+  &_Categories {
+    display: none;
+  }
+  &_Social {
+    padding: 0 1em;
+    font-size: 1.3rem;
+    .TopBar_SocialLink {
+      padding: .45em;
+      opacity: 0.4;
+      color: $white;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        opacity: 1;
+      }
+      &--patreon img {
+        height: 1.4rem;
+      }
+    }
+  }
+}
+
+.TopBar_Repos--WebDesign .TopBar_Repo--WebDesign a {
+  opacity: 0.9;
+}
+.TopBar_Repos--FrontEnd .TopBar_Repo--FrontEnd a {
+  opacity: 0.9;
+}
+.TopBar_Repos--Startups .TopBar_Repo--Startups a {
+  opacity: 0.9;
+}
+.TopBar_Repo {
+  font-size: 0.95em;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  a {
+    font-weight: 400;
+    opacity: 0.5;
+    padding: 1em 1.3em;
+    border-radius: 0.3em;
+    display: inline-block;
+    color: $white;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    &:hover {
+      opacity: 1;
+      background: rgba($white, 0.05);
+    }
+  }
+}
+
+.BottomBar_Repos {
+  display: none;
+}
+
+@media screen and (max-width: $mob) {
+  .TopBar {
+    overflow: hidden;
+    &_Logo {
+      width: 4.8rem;
+      &Desktop {
+        display: none;
+      }
+      &Mobile {
+        display: block;
+      }
+    }
+    &_Repos {
+      display: none;
+      .TopBar_Repo a {
+        padding: 1em;
+      }
+    }
+    &_Categories {
+      display: inline-block;
+      flex: 1;
+      height: 100%;
+      transform: translateY(0);
+      transition: transform 0.2s ease-in-out;
+    }
+    &_Category {
+      width: 100%;
+      text-align: center;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: 400;
+      height: 100%;
+      line-height: 4.8rem;
+      letter-spacing: 0.1em;
+      opacity: 0.8;
+      color: $white;
+    }
+    &_Hamburger {
+      display: inline-block;
+      width: 4.8rem;
+      background: $dark-blue;
+      font-size: 1.4em;
+      text-align: center;
+      i {
+        line-height: 4.8rem;
+        color: $white;
+      }
+    }
+    &_Social {
+      display: none;
+    }
+  }
+  .BottomBar_Repos {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.2rem;
+    justify-content: center;
+    background: $light-blue;
+    .TopBar_Repo a {
+      padding: 1em;
+    }
+  }
+}

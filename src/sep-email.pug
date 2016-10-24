@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    link(rel='icon', href='img/icon.png', type='image/png')
+    title webdesignrepo - a compact list of helpful webdesign links
+    meta(name='description', content='The best of webdesign, all in one place. webdesignrepo is a curated collection of helpful links from around the web for beginners and veterans alike. Primarily the repo is for webdesign links, but there is a large overlap with web development and graphic design.')
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  body
+    a.Email_ReturnLink(href="/") #[i(class="fa fa-arrow-left" aria-hidden="true")] Return
+    .Email
+      .Email_Top
+        p Join over 2,000 other Designers & Developers!
+        #mc_embed_signup
+          form(action="//rrrepo.us3.list-manage.com/subscribe/post?u=98616074a58bc97bbcdbdc691&amp;id=661e9be5d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+            #mc_embed_signup_scroll
+              input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required)
+              div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                input(type="text" name="b_98616074a58bc97bbcdbdc691_661e9be5d1" tabindex="-1" value="")
+              div.EmailSubCatch
+                input(type="submit" value="Subscribe now" name="subscribe now" id="mc-embedded-subscribe" class="button")
+        p Email from September
+      .Email_Container
+        .Email_Header webdesignrepo
+        .Email_Content
+          .Email_Section
+            .Email_SectionTitle Added Links
+            a.Email_Item(href="http://littlebigdetails.com/") Little Big Details
+            a.Email_Item(href="https://www.jpeg.io/") Jpeg.io
+            a.Email_Item(href="https://www.sitepoint.com/getting-started-with-vue-js/") Getting Started with Vue
+          .Email_Section
+            .Email_SectionTitle Recommended Viewing
+            a.Email_Item(href="https://femmebot.github.io/google-type/") Gorgeous Google Fonts Combinations
+            a.Email_Item(href="http://codepen.io/alexzaworski/full/EVNVXV") Gooey Slider
+            a.Email_Item(href="https://github.com/twbs/bootstrap/issues/20631") Bootstrap v3 No Longer Maintained
+    script(type='text/javascript').
+      var EmailSubCatch = document.getElementsByClassName('EmailSubCatch')[0];
+      EmailSubCatch.addEventListener('click', function(){
+        localStorage.setItem('wdr_subbed', true);
+      });
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39874852-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

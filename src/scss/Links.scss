@@ -1,0 +1,239 @@
+@import './_commons';
+
+.Links {
+  margin-left: $SideNavWidth;
+  width: calc(100% - #{$SideNavWidth});
+  height: calc(100vh - #{$TopBarHeight)});
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin-top: $TopBarHeight;
+  font-size: 1.6em;
+  padding: 3em 7em;
+  &_AdResponse {
+    display: none;
+    &--visible {
+      display: block;
+      padding: 1.2rem 2rem .5rem;
+      border: solid 1px $light-grey-1;
+      margin-bottom: 2rem;
+      margin-top: -1rem;
+      font-size: 1.2rem;
+      background: $white;
+      line-height: 140%;
+      color: $grey;
+      a {
+        @include link;
+        color: $med-blue;
+      }
+    }
+  }
+  &_Cat {
+    margin-bottom: 6em;
+    position: relative;
+    &Title {
+      font-size: 3em;
+      color: $orange;
+      margin-bottom: 0.2em;
+    }
+  }
+  &_SubCats {
+    margin-top: 0.5em;
+    background: $white;
+    padding: 1.5em 1.5em 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  &_SubCat {
+    width: 22rem;
+    margin-bottom: 2em;
+    padding: 0.7em;
+    margin-right: 1em;
+  }
+  &_SubCatTitle {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: $med-blue;
+    margin-bottom: 0.6em;
+    opacity: 0.85;
+  }
+  &_SubCatList {
+    list-style: none;
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    li {
+      color: $grey;
+      font-size: .85em;
+      position: relative;
+      width: 100%;
+    }
+  }
+  &_Tracks {
+    position: absolute;
+    left: -1.8em;
+    top: -.2rem;
+    opacity: 0.35;
+    &:hover {
+      opacity: 0.8;
+      .Links_TrackTooltip {
+        opacity: 1;
+      }
+    }
+  }
+  &_TrackTooltip {
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    z-index: -1;
+    z-index: 3;
+    top: 106%;
+    width: 6.6em;
+    left: -2.4em;
+    padding: 1em;
+    height: 3em;
+    font-size: 0.6em;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-align: center;
+    background: $light-blue;
+    font-weight: 700;
+    color: $white;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &_Track {
+    border-right: solid 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: .4rem;
+    @for $i from 1 through 3 {
+      &--amount#{$i} { height: 2.1rem * $i; }
+    }
+    &--num1 { border-color: #1BBC9B };
+    &--num2 { border-color: #E87E04 };
+    &--num3 { border-color: #EF4836 };
+  }
+  &_TrackNum {
+    $size: 1.3rem;
+    display: block;
+    font-size: .6em;
+    margin-right: .3em;
+    height: $size;
+    width: $size;
+    border-radius: $size;
+    border: solid 2px $grey;
+    font-weight: 700;
+    color: black;
+    background: $white;
+    text-align: center;
+    line-height: $size;
+    position: relative;
+    cursor: default;
+  }
+  &_Tag {
+    $color: $grey;
+    position: relative;
+    font-size: 1.2rem;
+    color: $color;
+    margin-left: .3rem;
+    font-family: Montserrat;
+    font-weight: 400;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    cursor: default;
+    &--dollar {
+      &:hover {
+        &:after {
+          content: 'PAID';
+        }
+      }
+    }
+    &--book{
+      &:hover {
+        &:after {
+          content: 'BOOK';
+        }
+      }
+    }
+    &:hover {
+      opacity: 1;
+      &:after {
+        position: absolute;
+        z-index: 3;
+        top: 150%;
+        width: 5em;
+        left: -2em;
+        padding: 1em;
+        font-size: 0.9em;
+        border-radius: 3px;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        background: $light-blue;
+        font-weight: 700;
+        color: $white;
+      }
+    }
+  }
+  &_Link {
+    @include link;
+    &--dummy {
+      cursor: pointer;
+      &:hover {
+        &:after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.Links_SubLinks {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  margin: -.2rem 0 .2rem;
+  display: flex;
+  overflow-x: auto;
+  a {
+    @include link;
+    color: lighten($grey, 10%);
+    font-size: 1.2rem;
+    margin-right: 1em;
+  }
+}
+
+.Links .Links_SubLinks--visible {
+  height: 2.8rem;
+}
+
+.SideNav_Recent .Links_SubLinks--visible {
+  height: 2.4rem;
+}
+
+@media screen and (min-width: 601px) and (max-width: $tab) {
+  .Links {
+    padding: 2em 4em;
+    &_CatTitle {
+      font-size: 2.3em;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .Links {
+    margin-left: 0;
+    width: 100%;
+    font-size: 15px;
+    padding: 0;
+    padding-top: 1.5em;
+    &_CatTitle {
+      font-size: 2.3em;
+      margin-left: 0.4em;
+    }
+  }
+}
