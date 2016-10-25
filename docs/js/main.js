@@ -352,19 +352,14 @@ function SmoothScrollAnchor() {
       // calculate destination place
       var scrollDest = $(this.hash)[0].offsetTop - 70;
 
-      if($(window).width() < 760) {
-          toggleSideNav();
+      if($(window).width() < 600) {
+        toggleSideNav();
       }
 
       // go to destination
       $('.Links').animate({
           scrollTop: scrollDest
       }, 500, 'swing');
-      var currentPath = window.location.href;
-      if (currentPath.includes('#')) {
-        currentPath = currentPath.substr(0, currentPath.indexOf('#'));
-      }
-      history.pushState({}, '', currentPath + $(this).attr("href"));
   });
 };
 
