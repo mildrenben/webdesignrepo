@@ -1,6 +1,6 @@
 var unseen;
 var recentType;
-var path = window.location.pathname; 
+var path = window.location.pathname;
 if (path === '/') {
   recentType = 'wdr_recent_webdesign';
 } else if (path === '/frontend.html') {
@@ -339,6 +339,13 @@ function SideNavTabs () {
 };
 
 function SmoothScrollAnchor() {
+  var Hamburger = document.getElementsByClassName('TopBar_Hamburger')[0];
+  var SideNav = document.getElementsByClassName('SideNav')[0];
+  var SideNavBackdrop = document.getElementsByClassName('SideNav_Backdrop')[0];
+  function toggleSideNav() {
+    SideNav.classList.toggle('SideNav--visible');
+    SideNavBackdrop.classList.toggle('SideNav_Backdrop--visible');
+  }
   // Smooth Scrolling Anchor Links
   $('a[href^="#"]').click(function(e) {
       e.preventDefault();
