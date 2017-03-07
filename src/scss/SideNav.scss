@@ -1,5 +1,7 @@
 @import './_commons';
 
+$infoHeightDesktop: 23.8em;
+
 .SideNav {
   position: fixed;
   top: $TopBarHeight;
@@ -54,7 +56,7 @@
   &_PanelWrap {
     position: relative;
     width: 100%;
-    height: calc(100% - 15em);
+    height: calc(100% - #{$infoHeightDesktop});
   }
   &_Panel {
     position: absolute;
@@ -177,9 +179,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 2rem;
+    padding-bottom: 1.6rem;
     border-top: solid 1px $light-grey-1;
-    height: 15em;
+    height: $infoHeightDesktop;
     margin-top: auto;
   }
   &_InfoBtn {
@@ -219,6 +221,20 @@
   }
 }
 
+#carbonads {
+	position: absolute;
+	left: 2rem;
+	bottom: 5.8rem;
+}
+
+.carbon-text {
+	font-size: 11px;
+	display: block;
+	width: 18rem;
+}
+
+$infoHeightMobile: 10em;
+
 @media screen and (max-width: $mob) {
   .SideNav {
     left: 0;
@@ -253,7 +269,7 @@
       height: 6rem;
     }
     &_PanelWrap {
-      height: calc(100% - 19em);
+      height: calc(100% - #{$infoHeightMobile});
     }
     &_Social {
       height: 4rem;
@@ -276,5 +292,36 @@
         }
       }
     }
+		&_Info {
+			height: $infoHeightMobile;
+		}
   }
+	#carbonads {
+		left: auto;
+		right: 1rem;
+    bottom: 3rem;
+
+	}
+	.carbon-wrap {
+		display: flex;
+		height: 8rem;
+		background: white;
+    border: solid 1px rgba($grey, 0.3);
+    border-radius: 4px;
+    padding: 5px;
+    width: 20rem;
+		img {
+			width: 90%;
+			height: 90%;
+			margin-right: .7rem;
+		}
+	}
+	.carbon-poweredby {
+		position: relative;
+		top: -1.4rem;
+		left: .4rem;
+	}
+	.carbon-text {
+		font-size: 11px;
+	}
 }
