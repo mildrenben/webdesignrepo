@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>webdesignrepo - a compact list of helpful webdesign links</title>
+        <meta name="description" content="The best of webdesign, all in one place" />
+        <meta name="keywords" content="collection, Web design, design, webdesign, webdev, web dev, web development, tutorials, inspiration, blogs, articles, learn, learn code, code, browser addon, browser addons, community, forum, forums, ask questions, fonts, webtools, web tools, SEO, search engine optimization, optimization, frameworks, web tutorials, web inspiration, web blogs, web articles, web forum, web forums, web fonts" />
+        <meta name="author" content="Ben Mildren, benmil.tumblr.com" />
+        <link href='http://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+        <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-wdr.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+        <link type="text/css" rel="stylesheet" href="css/fontello.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+    	<div class="container-fluid">
+        	<div class="row-fluid header-row">
+            	<div class="span8 offset1">
+                	<a href="index.html"><h1>webdesignrepo</h1></a>
+                    <a class="icon-facebook" href="http://www.facebook.com/webdesignrepowebsite"></a>
+                    <a class="icon-twitter" href="https://twitter.com/webdesignrepo"></a>
+                    <a class="icon-github" href="https://github.com/mildrenben/webdesignrepo"></a>
+                </div>
+            </div>
+            {{#rows}}
+            <div class="row-fluid top-list-row">
+                {{#sections}}
+                    <div class="span2 {{class}}">
+                        <h4>{{title}}</h4>
+                        <ul class="lists">
+                            {{#links}}
+                                <li><a href="http://{{link}}">{{name}}</a></li>
+                            {{/links}}
+                        </ul>
+                    </div>
+                {{/sections}}
+            </div>
+            {{/rows}}
+     	</div>
+        <script type="text/javascript">
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-39874852-1']);
+			  _gaq.push(['_trackPageview']);
+			
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		</script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+     	<script type="text/javascript">
+		  var GoSquared = {};
+		  GoSquared.acct = "GSN-580940-S";
+		  (function(w){
+			function gs(){
+			  w._gstc_lt = +new Date;
+			  var d = document, g = d.createElement("script");
+			  g.type = "text/javascript";
+			  g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+			  var s = d.getElementsByTagName("script")[0];
+			  s.parentNode.insertBefore(g, s);
+			}
+			w.addEventListener ?
+			  w.addEventListener("load", gs, false) :
+			  w.attachEvent("onload", gs);
+		  })(window);
+		</script>
+        <script type="text/javascript">
+			$(function() {
+    			$(".close").alert();
+				$(".nandn").affix();
+			});
+		</script>
+	</body>
+</html>
