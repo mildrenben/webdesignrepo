@@ -1,6 +1,6 @@
 @import './_commons';
 
-$infoHeightDesktop: 23.8em;
+$infoHeightDesktop: 15em;
 
 .SideNav {
   position: fixed;
@@ -10,7 +10,7 @@ $infoHeightDesktop: 23.8em;
   overflow-x: hidden;
   width: $SideNavWidth;
   background: $white;
-  height: calc(100vh - #{$TopBarHeight)});
+  height: calc(100vh - #{$TopBarHeight});
   display: flex;
   flex-direction: column;
   &_Tabs {
@@ -179,7 +179,7 @@ $infoHeightDesktop: 23.8em;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 1.6rem;
+    padding-bottom: 2rem;
     border-top: solid 1px $light-grey-1;
     height: $infoHeightDesktop;
     margin-top: auto;
@@ -219,18 +219,6 @@ $infoHeightDesktop: 23.8em;
   &_Social {
     display: none;
   }
-}
-
-#carbonads {
-	position: absolute;
-	left: 2rem;
-	bottom: 5.8rem;
-}
-
-.carbon-text {
-	font-size: 11px;
-	display: block;
-	width: 18rem;
 }
 
 $infoHeightMobile: 10em;
@@ -296,32 +284,4 @@ $infoHeightMobile: 10em;
 			height: $infoHeightMobile;
 		}
   }
-	#carbonads {
-		left: auto;
-		right: 1rem;
-    bottom: 3rem;
-
-	}
-	.carbon-wrap {
-		display: flex;
-		height: 8rem;
-		background: white;
-    border: solid 1px rgba($grey, 0.3);
-    border-radius: 4px;
-    padding: 5px;
-    width: 20rem;
-		img {
-			width: 90%;
-			height: 90%;
-			margin-right: .7rem;
-		}
-	}
-	.carbon-poweredby {
-		position: relative;
-		top: -1.4rem;
-		left: .4rem;
-	}
-	.carbon-text {
-		font-size: 11px;
-	}
 }

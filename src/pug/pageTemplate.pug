@@ -58,8 +58,6 @@ html(lang="en")
         a.TopBar_SocialLink(href='https://github.com/mildrenben/webdesignrepo')
           i.fa.fa-github(aria-hidden='true')
       div.SideNav_Info
-        div.SideNav_Sponsorship
-
         button#SubmitBtn.SideNav_InfoBtn.SideNav_SubmitBtn Submit
         button.SideNav_InfoBtn.SideNav_SponsorBtn Sponsor
 
@@ -96,7 +94,6 @@ html(lang="en")
                   input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
 
     main.Links(role="main")
-      div.Links_AdResponse  We notice you are using AdBlock. If you find webdesignrepo helpful, please consider whitelisting us or donating on #[a(href="https://www.patreon.com/user?u=4147601") Patreon]. Thanks!
       each category in data
         div.Links_Cat(id=category.id)
           h4.Links_CatTitle= category.title
@@ -140,7 +137,6 @@ html(lang="en")
     script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js')
     script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
     script(type='text/javascript', src='./js/main.js')
-    script(type="text/javascript", src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=webdesignrepocom", async="true", id="_carbonads_js")
     script(type='text/javascript').
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-39874852-1']);
