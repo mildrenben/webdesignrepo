@@ -5,7 +5,7 @@
     "start": "gulp"
   },
   "devDependencies": {
-    "browser-sync": "^2.16.0",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.0",
